@@ -10,3 +10,4 @@
 
 - [Пример 2](https://nbviewer.org/github/artamonoff/Game-Theory/blob/main/non-zero%20sum%20game/Example2.ipynb): Ожидаемый выгрыш и равновесие в чистых стратегиях
 - [Пример 2](https://nbviewer.org/github/artamonoff/Game-Theory/blob/main/non-zero%20sum%20game/Example2Nashpy.ipynb): использование бибиотеки `nashpy` для нахождения равновесий в чистых и смешанных стратегиях
+- [Пример 3](https://nbviewer.org/github/artamonoff/Game-Theory/blob/main/non-zero%20sum%20game/Example3.ipynb): Симуляции
