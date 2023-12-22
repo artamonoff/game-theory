@@ -12,8 +12,8 @@
 
 ## Игры с нулевой суммой
 
-- [Пример 1](https://nbviewer.org/github/artamonoff/Game-Theory/blob/main/zero%20sum%20game/Example1.ipynb): Сведение к задаче линейного программирования
-- [Пример 1](https://nbviewer.org/github/artamonoff/Game-Theory/blob/main/zero%20sum%20game/Example1Nashpy.ipynb): использование бибиотеки `nashpy`
+- [Пример 1](https://nbviewer.org/github/artamonoff/game-theory/blob/main/zero-sum-game/example.ipynb): Сведение к задаче линейного программирования
+- [Пример 1](https://nbviewer.org/github/artamonoff/game-theory/blob/main/zero-sum-game/example-nashpy.ipynb): использование бибиотеки `nashpy`
 
 ## Игры с ненулевой суммой
 
