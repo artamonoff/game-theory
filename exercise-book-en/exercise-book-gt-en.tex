@@ -1,0 +1,447 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[english, russian]{babel}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{enumerate,hhline, bm}
+\usepackage[mathscr]{eucal}
+%\usepackage{mathtext}
+
+\usepackage{hyperref}
+\hypersetup{unicode=true, final=true, colorlinks=true}
+
+
+\input{game-defs-en.tex}
+
+\theoremstyle{remark}
+\newtheorem{exercise}{}[subsection]
+\renewcommand{\theexercise}{\textbf{\textnumero \arabic{exercise}}}
+
+%\DeclareMathOperator{\cov}{cov}
+%\DeclareMathOperator{\corr}{corr}
+%\DeclareMathOperator{\Var}{Var}
+
+%\topmargin=-2cm%-1.5cm
+
+%\addtolength{\textheight}{3cm}
+
+%\oddsidemargin=-0.1cm
+
+%\addtolength{\textwidth}{1.8cm}
+
+
+\title{Problems in Game Theory}
+\author{Artamonov N.V.}
+%\date{Spring 2014}
+
+%\title{Problems for Exam Preparation in the Course
+%<<Methods of Optimal Solutions>>}\author{\copyright Artamonov N.V., Department of EMMAE}
+
+\begin{document}
+
+\maketitle
+
+%\markright{}
+\tableofcontents
+
+\section{Zero-Sum Games}
+
+\cite{Asoke}: pp. 364 -- 366
+
+\noindent\cite{Eichhorn} p. 207
+
+\noindent\cite{Peters} pp. 33 -- 35
+
+
+\begin{exercise}%[\textbf{5 points} for each item]
+Two players play for money, simultaneously naming one of the numbers 1 or 2,
+and then calculating the sum $S$. If $S$ is even, then the first player wins $S$ dollars from the second,
+if $S$ is odd, then the second wins $S$ dollars from the first.
+\begin{enumerate}
+	\item Construct the payoff matrix (utility matrix) for each player.
+	Will this game be a zero-sum game? % Justify your answer.
+	\item Will there be dominant strategies in this game? % Explain your answer.
+	\item Will there be Nash equilibria in pure strategies? % Justify your answer.
+	\item Suppose players follow mixed strategies
+	\(P^\top=\begin{pmatrix} 0.3 & 0.7\end{pmatrix}\) and \(Q^\top=\begin{pmatrix} 0.25 & 0.75\end{pmatrix}\).
+	Compute the expected payoff for each player.
+	\item Find the Nash equilibria in mixed strategies.
+	% \item Give an interpretation of the equilibrium (Nash) strategies.
+	\item Find the expected payoff (utility) for each player
+	in the Nash equilibrium in mixed strategies.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Solve the previous problem under the condition that players name one of
+the following numbers: 1, 2, or 3.
+\end{exercise}
+
+\begin{exercise}
+Consider an antagonistic game with the matrix
+\[
+	\begin{pmatrix}
+	-2 & 2 & -1 & 0 & 1 \\
+	2 & 3 & 1 & 2 & 2 \\
+	3 & -3 & 2 & 4 & 3 \\
+	-2 & 1 & -2 & -1 & 0
+	\end{pmatrix}
+\]
+\begin{enumerate}
+	\item Find the upper and lower value of the game.
+	\item Does an equilibrium in pure strategies exist? Explain your answer.
+	\item Can the size of the game's payoff matrix be reduced?
+	% What is this method called and what does it consist of?
+	% \item Solve this problem using the geometric method for $2\times n$ games.
+	\item Find the Nash equilibrium by reducing it to a linear
+	programming problem % (solve graphically).
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Apply the dominance operation to the payoff matrices. Conduct an analysis of the game before and
+after the dominance operation. Find the Nash equilibrium and the value of the game.
+\begin{align*}
+	a)&\;\begin{pmatrix} 2 & 1& 0 & -1 & 4 \\ 3 & 4 & 1 & 1 & 4 \\
+	-1 & 0 & 2 & -4 & 1 \\ 2 & 2 & 3 & 1 & 3 \\ 4 & 5 & 3 & 1 & 2 \end{pmatrix} &
+	b)&\; \begin{pmatrix} 1 & 4 & 0 & -3 & 2 \\ 3 & 3 & 2 & 4  & 1 \\ 2 & 5 & 1 & 2 & 3 \\ 
+	3 & 4 & -1 & 0 & 2 \\ 2 & 2 & 1 & 1 & 0 \end{pmatrix} \\
+	c)&\; \begin{pmatrix} 4 & 3 & 3 & 4 & 4 \\ 3 & -1 & -5 & 1 & 5 \\ 8 & 2 & -6 & 0 & -5 \\ 
+	2 & 0 & 1 & 4 & 5 \\ 2 & 1 & 3 & 5 & 6 \\ 4 & 4 & 3 & 6 & 5 \end{pmatrix}
+\end{align*}
+\end{exercise}
+
+\begin{exercise}
+Consider an antagonistic game with the matrix
+\[
+	\begin{pmatrix}
+	2 & -1 \\ -2 & 1
+	\end{pmatrix}
+\]
+\begin{enumerate}
+	\item Consider the mixed strategies of the players
+	\begin{align*}
+		P^\top&=\begin{pmatrix} 0.4 & 0.6 \end{pmatrix} &
+		Q^\top&=\begin{pmatrix} 0.8 & 0.2 \end{pmatrix}
+	\end{align*}
+	Find the expected payoffs for each player.
+	\item Find the Nash equilibria and the value of the game.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Find the Nash equilibrium in mixed strategies and the value of the game in
+the zero-sum game
+\[
+	\begin{pmatrix}
+	-20 & 2 & 22 & -15 \\ 20 & -8 & -11 & 0
+    \end{pmatrix}
+\]
+\end{exercise}
+
+\begin{exercise}
+For the antagonistic game with the matrix
+\begin{align*}
+	a)&\;\begin{pmatrix} 4 & 2 & 1 & 5 \\ 2 & 3 & 6 & 3 \end{pmatrix} &
+	b)&\; \begin{pmatrix} 2 & 4 \\ 0 & 5 \\ 2 & 6 \\ 3 & -4 \\ 1 & 5 \\ 3 & -1\end{pmatrix} &
+	c)&\; \begin{pmatrix} -2 & 3 & 4 & 1 & 3 \\ 6 & -5 & 3 & 3 & -1 \end{pmatrix}
+\end{align*}
+find the Nash equilibrium.
+\end{exercise}
+
+\begin{exercise}
+The "weapon jamming" game. Side $A$ has three types of weapons
+$A_1,A_2,A_3$, and side $B$ has three types of jammers $B_1,B_2,B_3$. The probability of solving
+the combat task by side $A$ for different types of weapons and jammers is given by the matrix
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}\hline
+	& $B_1$ & $B_2$ & $B_3$ \\ \hline
+	$A_1$ & 0.8 & 0.2 & 0.4 \\ \hline
+	$A_2$ & 0.4 & 0.5 & 0.6 \\ \hline
+	$A_3$ & 0.1 & 0.7 & 0.3 \\ \hline
+	\end{tabular}
+\end{center}
+Side $A$ aims to solve the combat task, side $B$ aims to prevent it.
+\begin{itemize}
+	\item Find the upper and lower value of the game. Will there be Nash equilibria
+	in pure strategies in this game?
+\end{itemize}
+For convenience, multiply the matrix by 10.
+\begin{itemize}
+	\item Write down the pair of dual problems for finding the equilibrium in mixed strategies.
+\end{itemize}
+Let the optimal solutions of the dual linear programming problems be known:
+for player $A$
+\begin{align*}
+	x_1&=\frac{1}{32} & x_2&=\frac{3}{16} & x_3&=0
+\end{align*}
+for player $B$
+\begin{align*}
+	y_1&=\frac{3}{32} & y_2&=\frac{4}{32} & y_3&=0
+\end{align*}
+\begin{itemize}
+	\item Find the optimal strategies for each player and the value of the game.
+\end{itemize}
+\end{exercise}
+
+\begin{exercise}
+Colonel Blotto commands three units. There are three hills in front of him.
+He must decide how many units to send to capture each hill.
+His opponent, Count Baloney, also commands three units and must make the same decision.
+If on one hill one opponent has a numerical superiority, then he captures that hill.
+If not, the hill remains neutral territory.
+The payoff for each player is the number of hills captured by him,
+minus the number of hills captured by the opponent.
+Construct the game matrix and find the Nash equilibrium in this game.
+\end{exercise}
+
+
+\section{Non-Zero-Sum Games}
+
+\begin{exercise}
+Consider the payoff matrix of participants A and B in a certain paired tournament,
+who adhere to one of two strategies in it
+%bimatrix game
+\begin{center}
+	\begin{tabular}{|c||c|c|}
+	\hline
+	% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+	& $s_{-1}$ & $s_{-2}$  \\ \hline \hline
+	$s_1$ & 1, 2 & 4, 3  \\ \hline
+	$s_2$ & 3, 4 & 2, 3  \\ %\hline
+	\hline
+	\end{tabular}
+\end{center}
+\begin{enumerate}
+	\item Consider the mixed strategies of the players
+	\begin{align*}
+		P^\top&=\begin{pmatrix} 0.7 & 0.3 \end{pmatrix} &
+		Q^\top&=\begin{pmatrix} 0.6 & 0.4 \end{pmatrix}
+	\end{align*}
+	Find the expected payoffs for each player.
+	\item Find the Nash equilibria in pure and mixed strategies.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Consider the bimatrix game
+\begin{center}
+	\begin{tabular}{|c||c|c|}
+	\hline
+	% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+	& $s_{-1}$ & $s_{-2}$  \\ \hline \hline
+	$s_1$ & 4, 2 & 2, 0  \\ \hline
+	$s_2$ & 2, 2 & 3, 5  \\ %\hline
+	\hline
+	\end{tabular}
+\end{center}
+\begin{enumerate}
+	\item Consider the mixed strategies of the players
+	\begin{align*}
+		P^\top&=\begin{pmatrix} 0.5 & 0.5 \end{pmatrix} &
+		Q^\top&=\begin{pmatrix} 0.2 & 0.8 \end{pmatrix}
+	\end{align*}
+	Find the expected payoffs for each player.
+	\item Find the Nash equilibria in pure and mixed strategies.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Consider the bimatrix game
+\begin{center}
+	\begin{tabular}{|c||c|c|c|}
+	\hline
+	% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+	& $s_{-1}$ & $s_{-2}$  & $s_{-3}$ \\ \hline \hline
+	$s_1$ & 4, 1 & 2, 2 & 1, 3  \\ \hline
+	$s_2$ & 2, 2 & 3, 5 & 0, 4 \\ %\hline
+	\hline
+	\end{tabular}
+\end{center}
+\begin{itemize}
+	\item Consider the mixed strategies of the players
+	\begin{align*}
+		P^\top&=\begin{pmatrix} 0.6 & 0.4 \end{pmatrix} &
+		Q^\top&=\begin{pmatrix} 0.2 & 0.3 & 0.5 \end{pmatrix}
+	\end{align*}
+	Find the expected payoffs for each player.
+	\item Find the Nash equilibria in pure and mixed strategies.
+\end{itemize}
+\end{exercise}
+
+\begin{exercise}
+Consider the bimatrix game
+\begin{center}
+	\begin{tabular}{|c||c|c|}
+	\hline
+	% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+	& $s_{-1}$ & $s_{-2}$  \\ \hline \hline
+	$s_1$ & 4, 2 & 2, 0  \\ \hline
+	$s_2$ & 2, 2 & 3, 5  \\ \hline
+	$s_3$ & 3, 1 & 2, 3 \\ 
+	\hline
+	\end{tabular}
+\end{center}
+\begin{enumerate}
+	\item Consider the mixed strategies of the players
+	\begin{align*}
+		P^\top&=\begin{pmatrix} 0.4 & 0.4 & 0.2 \end{pmatrix} &
+		Q^\top&=\begin{pmatrix} 0.3 & 0.7 \end{pmatrix}
+	\end{align*}
+	Find the expected payoffs for each player.
+	\item Find the Nash equilibria in pure and mixed strategies.
+\end{enumerate}
+\end{exercise}
+
+
+\begin{exercise}[Cournot Duopoly]
+Let $Q_i$ be the output volume, $cQ_i$ --
+the costs of firm $i=1,2$. The demand function has the form ($a>c>0$)
+\[
+	P(Q)=\begin{cases}
+	a-Q, & Q\leq a \\
+	0, & Q>a
+	\end{cases}
+\]
+The firm's revenue is determined by the equality $(P(Q_1+Q_2)-c)Q_i$.
+
+Each firm has two options: "small-scale production"
+$Q^l=(a-c)/4$ and "large-scale production" $Q^h=(a-c)/3$.
+\begin{enumerate}
+	\item Write the bimatrix game in normal form.
+	\item Find the Nash equilibria in pure and mixed
+	strategies.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[Bertrand Duopoly]
+Suppose there are two competing firms $A$ and $B$ in the mineral water market.
+The fixed costs of each are 300
+(regardless of sales volume). Each firm
+must choose either a "high" price for its product $P_h=1$,
+or a "low" price $P_l=0.5$ (price per bottle). At the "high" price,
+1000 bottles can be sold on the market, at the "low" price -- 2000 bottles.
+If companies choose the same price, they split sales volumes equally.
+If companies choose different prices, the market is completely captured by the company
+with the lower price (the other sells nothing).
+\begin{enumerate}
+	\item Construct the payoff matrix (utility matrix) for each player.
+	Will this game be a zero-sum game? % Justify your answer.
+	\item Will there be dominant strategies in this game? % Explain your answer.
+	\item Will there be Nash equilibria in pure strategies? % Justify your answer.
+	\item Find the Nash equilibria in mixed strategies.
+	\item Give an interpretation of the equilibrium (Nash) strategies.
+	\item Find the expected payoff (utility) for each player
+	in the Nash equilibrium in mixed strategies.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[Bertrand Duopoly]
+Suppose there are two competing firms $A$ and $B$ in the mineral water market.
+The fixed costs of each are \$5000
+(regardless of sales volume). Each firm
+must choose either a "high" price for its product $P_h=\$2$, or a "low" price $P_l=\$1$
+(price per bottle). Then:
+\begin{enumerate}
+	\item at the "high" price, 5000 bottles can be sold on the market,
+	\item at the "low" price, 10000 bottles can be sold on the market,
+	\item if companies choose the same price, they split sales volumes equally,
+	\item if companies choose different prices, the market is completely captured by the company
+	with the lower price (the other sells nothing).
+\end{enumerate}
+Construct the game matrix. Will this be a zero-sum game? Find the Nash equilibria
+and the value of the game.
+\end{exercise}
+
+\begin{exercise}
+Consider the bimatrix game
+\begin{center}
+	\begin{tabular}{|c||c|c|c|c|}
+	 \hline
+	% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+	& $s_{-1}$ & $s_{-2}$ & $s_{-3}$ & $s_{-4}$\\ \hline \hline
+	$s_1$ & 2, 2 & 1, 1 & 1, 3 & 2, 1\\ \hline
+	$s_2$ & 2, 4 & 1, 3 & 1, 2 & 4, 2\\ \hline
+	$s_3$ & 3, 2 & 2, 3 & 2, 5 & 3, 1 \\ \hline
+	$s_4$ & 4, 1 & 1, 4 & 3, 1 & 2, 2 \\
+	\hline
+	\end{tabular}
+\end{center}
+Perform the procedure of iterated elimination of dominated strategies.
+Will there be Nash and Pareto equilibria in pure strategies in this game?
+\end{exercise}
+
+\begin{exercise}
+Two airline passengers, traveling on the same flight, lost their suitcases.
+The airline is ready to compensate each passenger for the damage.
+To determine the amount of compensation, each passenger is asked to report
+how much they value the contents of their suitcase.
+Each passenger can name an amount not less than \$90 and not more than \$100.
+The compensation conditions are as follows: if both report the same amount,
+then each will receive that amount as compensation.
+If the damage claimed by one passenger is less
+than the damage claimed by the other passenger, then each passenger will receive compensation
+equal to the smaller of the claimed amounts. In this case, the one who claimed the smaller amount
+receives an additional \$2, and the one who claimed the larger amount loses an additional two dollars.
+Construct the game matrix and find the Nash equilibrium in this game.
+\end{exercise}
+
+\begin{exercise}
+Winnie the Pooh and Piglet decide who they will visit --- Pooh
+(strategy 1), Piglet (strategy 2), or Rabbit (strategy 3).
+Friends can go together or separately. From Pooh's point
+of view, the pleasure from visiting is assessed as follows: 1, 2
+and 4 respectively. From Piglet's point of view, the pleasures are: 3,
+2 and 2 respectively. The presence of a companion (a joint visit)
+adds one unit of pleasure to each. Find
+the equilibrium in this game.
+\end{exercise}
+
+\begin{exercise}
+Two firms share a market. Each firm has three strategies --- set a
+low price, medium price, and high price $p_1=2$, $p_2=4$,
+$p_3=7$. Assume that market demand is 100 units
+of product; if prices are equal, it is split equally between firms;
+if one firm sets a high price and the other a medium price, then demand
+is 30 and 70 units respectively. For medium and low
+prices, demand is also split 30 and 70, and for high and low
+it is 10 and 90 units respectively. Find the
+Nash equilibrium.
+\end{exercise}
+
+\begin{exercise}
+Two radio stations share a market by choosing from two broadcast formats: news and music.
+The target audience for each format is 38% and 62% respectively. If radio stations
+choose the same broadcast format, they split the target audience in half.
+If radio stations choose different broadcast formats, then each ``captures''
+the entire target audience of its chosen broadcast format. The radio station's payoff is its audience share.
+\begin{enumerate}
+	\item Write the game in normal form.
+	Will this game be a zero-sum game? % Justify your answer.
+	\item Find the Nash equilibria in pure and mixed strategies
+	and the players' payoffs at equilibrium.
+\end{enumerate}
+\end{exercise}
+
+\begin{thebibliography}{99}
+
+\bibitem{Asoke} Asoke Kumar Bhunia, Laxminarayan Sahoo, Ali Akbar Shaikh,
+<<Advanced Optimization and Operations Research>>
+
+\bibitem{Eichhorn} Wolfgang Eichhorn, Winfried Gleißner,
+<<Mathematics and Methodology for Economics>>
+
+\bibitem{Webb} James N.Webb <<Game Theory Decisions, Interaction and Evolution>>
+
+\bibitem{Hayashi} Takashi Hayashi, <<Microeconomic Theory for the Social Sciences>>
+
+\bibitem{Peters} Hans Peters, <Game Theory A Multi-Leveled Approach>
+
+\end{thebibliography}
+
+% \subsection{Bayesian Games}
+
+% ... (The content of the Bayesian games section would be translated similarly if needed) ...
+
+\end{document}
